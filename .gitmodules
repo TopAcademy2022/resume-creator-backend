@@ -1,0 +1,4 @@
+[submodule "lib/resume-creator-logic"]
+	path = lib/resume-creator-logic
+	url = https://github.com/TopAcademy2022/resume-creator-logic.git
+	branch = main
