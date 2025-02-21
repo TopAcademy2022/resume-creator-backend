@@ -5,6 +5,7 @@ WORKDIR /app
 COPY build.gradle settings.gradle ./
 COPY src ./src
 
+RUN chmod +x build-core.sh && ./build-core.sh
 RUN gradle build --no-daemon
 
 
