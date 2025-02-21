@@ -13,6 +13,7 @@ git submodule update
 
 # Change to the resume-creator-logic directory and build the project
 cd "lib/resume-creator-logic" || exit
+chmod +x ./gradlew
 ./gradlew build
 
 # Change back to the original directory

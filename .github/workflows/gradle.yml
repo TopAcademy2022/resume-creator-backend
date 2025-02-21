@@ -36,7 +36,7 @@ jobs:
     - name: Add core lib
       run: |
         chmod +x build-core.sh
-        sudo ./build-core.sh
+        ./build-core.sh
 
     - name: Make gradlew executable
       run: chmod +x gradlew
