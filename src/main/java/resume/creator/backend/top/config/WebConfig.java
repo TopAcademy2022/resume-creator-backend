@@ -1,4 +1,4 @@
-package resume.creator.backend.top;
+package resume.creator.backend.top.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
