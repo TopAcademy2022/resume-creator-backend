@@ -14,8 +14,9 @@ import org.springframework.web.bind.annotation.RestController;
 import resume.creator.backend.top.models.Answer;
 import resume.creator.backend.top.models.ResumeQuestion;
 import resume.creator.backend.top.models.ResumeType;
-import resume.creator.logic.models.Resume;
-import resume.creator.logic.services.ResumeService;
+import resume.creator.logic.domain.models.Resume;
+import resume.creator.logic.domain.services.ResumeService;
+import resume.creator.logic.infrastructure.data.AppDbContext;
 
 @RestController
 @RequestMapping("resume")
@@ -24,6 +25,7 @@ public class ResumeController {
     public ResponseEntity<List<ResumeType>> GetResumeTypes() {
         // Get List objects from service
         // Test data
+        AppDbContext dbContext = new AppDbContext();
         List<ResumeType> resumeTypes = new ArrayList<ResumeType>();
 
         resumeTypes.add(new ResumeType("DefaultResume"));

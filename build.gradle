@@ -18,11 +18,16 @@ repositories {
 }
 
 dependencies {
+	implementation("org.xerial:sqlite-jdbc:3.45.1.0")
+	implementation("org.hibernate:hibernate-community-dialects:6.6.3.Final")
+
 	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.5'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
-	implementation files('lib/app.jar')
+	
+	implementation files('lib/resume-creator-logic-domain.jar')
+	implementation files('lib/resume-creator-logic-infrastructure.jar')
 }
 
 tasks.named('test') {
